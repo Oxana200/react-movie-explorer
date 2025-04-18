@@ -1,0 +1,16 @@
+/* Navigation.module.css */
+.nav {
+    padding: 1rem;
+    background-color: #333;
+}
+
+.link {
+    color: white;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+.link.active {
+    font-weight: bold;
+    text-decoration: underline;
+}

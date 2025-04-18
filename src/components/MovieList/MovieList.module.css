@@ -1,0 +1,17 @@
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.item {
+    margin-bottom: 0.5rem;
+}
+
+.item a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+.item a:hover {
+    text-decoration: underline;
+}
