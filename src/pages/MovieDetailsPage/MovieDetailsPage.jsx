@@ -50,15 +50,15 @@ export default function MovieDetailsPage() {
       </div>
 
       <div className={css.additional}>
-        <h3>Additional information</h3>
+        <h3 className={css.title}>Additional information</h3>
         <ul>
           <li>
-            <Link to="cast" state={{ from: backLink.current }}>
+            <Link to="cast" state={{ from: backLink.current }} className={css.backLink}>
               Cast
             </Link>
           </li>
           <li>
-            <Link to="reviews" state={{ from: backLink.current }}>
+            <Link to="reviews" state={{ from: backLink.current }} className={css.backLink}>
               Reviews
             </Link>
           </li>

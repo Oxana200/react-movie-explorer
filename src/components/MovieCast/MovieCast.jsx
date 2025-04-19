@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import css from './MovieCast.module.css';
+import styles from './MovieCast.module.css';
 import { fetchMovieCredits } from '../../services/tmdbApi';
 
 export default function MovieCast() {
@@ -24,9 +24,9 @@ export default function MovieCast() {
   if (error) return <p>{error}</p>;
 
   return (
-    <ul className={css.castList}>
+    <ul className={styles.castList}>
       {cast.map(({ id, profile_path, name, character }) => (
-        <li key={id} className={css.castItem}>
+        <li key={id} className={styles.castItem}>
           <img
             src={
               profile_path
@@ -34,7 +34,7 @@ export default function MovieCast() {
                 : 'https://via.placeholder.com/200x300?text=No+Image'
             }
             alt={name}
-            className={css.castImg}
+            className={styles.castImg}
           />
           <p><strong>{name}</strong></p>
           <p>Character: {character}</p>

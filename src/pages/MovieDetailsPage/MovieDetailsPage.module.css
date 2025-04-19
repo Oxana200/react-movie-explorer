@@ -2,11 +2,19 @@
     padding: 20px;
 }
 
+.title {
+    padding: 20px;
+}
+
 .backLink {
     display: inline-block;
-    margin-bottom: 16px;
     text-decoration: none;
-    color: #2196f3;
+    color: #e63946;
+    padding-bottom: 15px;
+}
+
+.backLink:hover {
+    font-weight: bold;
 }
 
 .details {

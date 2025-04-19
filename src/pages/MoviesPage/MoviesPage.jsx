@@ -34,14 +34,20 @@ export default function MoviesPage() {
   };
 
   return (
-    <div className={css.container}>
-      <form onSubmit={handleSubmit} className={css.form}>
-        <input type="text" name="query" defaultValue={query} />
-        <button type="submit">Пошук</button>
-      </form>
+  <div className={css.container}>
+    <form onSubmit={handleSubmit} className={css.form}>
+      <input
+        type="text"
+        name="query"
+        defaultValue={query}
+        placeholder="Введіть назву фільму"
+      />
+      <button type="submit">Пошук</button>
+    </form>
 
-      {error && <p>{error}</p>}
-      {movies.length > 0 && <MovieList movies={movies} />}
-    </div>
-  );
+    {error && <p>{error}</p>}
+    {movies.length > 0 && <MovieList movies={movies} />}
+  </div>
+);
+
 }

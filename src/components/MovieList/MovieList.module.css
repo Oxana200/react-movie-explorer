@@ -1,17 +1,37 @@
 .list {
-    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
     padding: 0;
+    list-style: none;
 }
 
 .item {
-    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
 }
 
-.item a {
-    color: #007acc;
+.item:hover {
+    transform: scale(1.03);
+}
+
+.link {
     text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.item a:hover {
-    text-decoration: underline;
+.poster {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.title {
+    padding: 15px;
+    font-weight: bold;
 }

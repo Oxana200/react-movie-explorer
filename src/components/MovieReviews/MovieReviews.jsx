@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import css from './MovieReviews.module.css';
+import styles from './MovieReviews.module.css';
 import { fetchMovieReviews } from '../../services/tmdbApi';
 
 export default function MovieReviews() {
@@ -24,13 +24,13 @@ export default function MovieReviews() {
   if (error) return <p>{error}</p>;
 
   if (reviews.length === 0) {
-    return <p className={css.noReviews}>Немає відгуків про цей фільм.</p>;
+    return <p className={styles.noReviews}>Немає відгуків про цей фільм.</p>;
   }
 
   return (
-    <ul className={css.reviewList}>
+    <ul className={styles.reviewList}>
       {reviews.map(({ id, author, content }) => (
-        <li key={id} className={css.reviewItem}>
+        <li key={id} className={styles.reviewItem}>
           <h4>Автор: {author}</h4>
           <p>{content}</p>
         </li>
